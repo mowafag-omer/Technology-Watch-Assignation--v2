@@ -6,8 +6,8 @@
 
 The aim of this project is to be able to create a list of students in one hand, and in the other hand be able to randomly assign a chosen Topic to a Student who wasn't assigned yet to a Technology Watch. A single page in which we can add both students and Technology Watch.
 using nodeJS and EJS for render an ejs template which : 
-- will render our two form; one for add a student and the other for add a technology-watch. 
-- will display the students registered and technology-watch assigned to a student.
+- Render our two form; one for add a student and the other for add a technology-watch. 
+- Display the students registered and technology-watch assigned to a student.
 <br><br>
 
 ## contents
