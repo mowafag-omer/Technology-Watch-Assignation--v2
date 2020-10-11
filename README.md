@@ -72,7 +72,6 @@ http.createServer(function (req, res,) {
 
 ## Server-side
 - ejs view
-![Test Image](https://github.com/mowafag-omer/Technology-Watch-Assignation/blob/master/Capture.PNG)
 ```ejs
 <div class="m-3">
     <ul style="list-style-type:none" class="p-0 mb-3">
@@ -105,3 +104,4 @@ http.createServer(function (req, res,) {
       </form>
   </div>
 ```
+![Test Image](https://github.com/mowafag-omer/Technology-Watch-Assignation/blob/master/Capture.PNG)
