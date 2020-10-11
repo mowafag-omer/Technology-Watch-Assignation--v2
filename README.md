@@ -15,7 +15,7 @@ using nodeJS and EJS for render an ejs template which :
 * [Server-side](#Server-side)
 * [Client-side](#Client-side)
 <br>
-![Test Image 4](https://github.com/mowafag-omer/Technology-Watch-Assignation/blob/master/Capture.PNG)
+![Test Image](https://github.com/mowafag-omer/Technology-Watch-Assignation/blob/master/Capture.PNG)
 <br><br>
 
 ## Server-side
@@ -69,4 +69,40 @@ http.createServer(function (req, res,) {
     }) 
     res.writeHead(301, {Location: '/'})
   }
+```
+<br>
+
+## Server-side
+- ejs view
+```ejs
+<div class="m-3">
+    <ul style="list-style-type:none" class="p-0 mb-3">
+      <% data.name.forEach(name => {%>
+        <% if(name[1] == 1){ %>
+          <li style="text-decoration: line-through;"><%= name[0] %></li>
+        <% } else { %> 
+          <li><%= name[0] %></li>
+      <% }}) %> 
+    </ul>
+    <form method="POST" action="/student">
+      <label for="Input1"><b>Student Name</b></label>
+      <input type="text" name="student" class="form-control" id="Input1" placeholder="Student" required>
+      <button type="submit" id = 'addStudent' class="btn btn-outline-success mt-3">Add</button>
+    </form>
+
+    <ul style="list-style-type:none" class="p-0 my-3">
+      <% data.tech.forEach(tech => {%>
+        <li><%= tech[0]%> - <%= tech[1]%></li>
+      <% }) %> 
+    </ul>
+      <form method="POST" action="/tech">
+        <label for="input2"><b>Technology</b></label>
+        <input type="text" name="tech" class="form-control" id="input2" required>
+        <button type="submit" class="btn btn-outline-success mt-3">Assign</button>
+      </form>
+      
+      <form method="POST" action="/refresh">
+        <button type="submit" class="btn btn-outline-danger mt-4">Refresh the list</button>
+      </form>
+  </div>
 ```
