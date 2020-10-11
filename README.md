@@ -10,7 +10,7 @@ using nodeJS and EJS for render an ejs template which :
 - will display the students registered and technology-watch assigned to a student.
 <br><br>
 
-##contents
+## contents
 * [App](#app)
 * [Server](#Server)
 <br>
