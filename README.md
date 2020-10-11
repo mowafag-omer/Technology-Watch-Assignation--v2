@@ -31,15 +31,20 @@ window.onload = () => {
   list[1].innerHTML = technologie.map(i => `<li> ${i[0]} - ${i[1]}</li>`).join('') 
 }
 ```
-- add student and store data in the localStorage
+- node.js modules and view rendering function
 ```js
-form[0].addEventListener('submit', (event) => {
-  event.preventDefault()
-  studentsName.push(studentInput.value)
-  localStorage.setItem("student", JSON.stringify(studentsName))
-  list[0].innerHTML += "<li>" + studentInput.value + "</li>"
-  form[0].reset()  
-})
+const http = require('http')
+const fs = require("fs")
+const ejs = require("ejs")
+const url = require('url')
+const { parse } = require('querystring')
+
+const data = JSON.parse(fs.readFileSync('twdata.json'))
+
+const renderHTML = (content) => {
+  const template = fs.readFileSync(__dirname + '/views/index.ejs', 'utf8')
+  return tempRnd = ejs.render(template, {data: content})
+}
 ```
 - randomly assign a chosen Topic to a Student who wasn't assigned yet to a Technology Watch
 ```js
