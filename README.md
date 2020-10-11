@@ -11,7 +11,6 @@ using nodeJS and EJS for render an ejs template which :
 <br><br>
 
 ## contents
-* [App](#app)
 * [Server-side](#Server-side)
 * [Client-side](#Client-side)
 <br><br>
